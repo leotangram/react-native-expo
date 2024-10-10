@@ -1,3 +1,7 @@
 export { default as MainSlideShow } from './movies/MainSlideShow'
 export { default as MoviePoster } from './movies/MoviePoster'
 export { default as MoviesHorizontalList } from './movies/MoviesHorizontalList'
+export { default as MovieHeader } from './movie/MovieHeader'
+export { default as MovieDescription } from './movie/MovieDescription'
+export { default as MovieCast } from './movie/MovieCast'
+export { ActorCard } from './movie/ActorCard'

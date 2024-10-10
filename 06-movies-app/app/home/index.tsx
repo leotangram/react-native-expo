@@ -16,8 +16,6 @@ const HomeScreen = () => {
     )
   }
 
-  const safeAreaTop = `pt-${useSafeAreaInsets().top}`
-
   return (
     <ScrollView>
       <View className="mt-2 pb-10" style={{ paddingTop: safeArea.top }}>
@@ -29,8 +27,9 @@ const HomeScreen = () => {
             title="Popular"
           />
           <MoviesHorizontalList
-            movies={topRatedQuery.data ?? []}
+            movies={topRatedQuery.data?.pages.flat() ?? []}
             title="Top Rated"
+            loadNextPage={topRatedQuery.fetchNextPage}
           />
           <MoviesHorizontalList
             movies={upcomingQuery.data ?? []}
